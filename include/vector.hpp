@@ -3,7 +3,7 @@
 class vector_t
 {
 private:
-	int * elements_;
+	int * data_;
 	std::size_t size_;
 	std::size_t capacity_;
 public:
