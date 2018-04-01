@@ -116,7 +116,7 @@ void vector_t::pop_back()
 		data_ = new int [capacity_];
 		for ( unsigned int i = 0;i < size_;i++ )
 		{
-			this->data_[i]=copy.data_[i]
+			this->data_[i]=copy.data_[i];
 		}
 		size_--;		
 	}
