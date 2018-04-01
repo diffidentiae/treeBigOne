@@ -138,9 +138,9 @@ int vector_t::operator [](std::size_t index) const
 
 bool operator !=(vector_t const & lhs, vector_t const & rhs)
 {
-	if ( (lhs.size_ == rhs.size_) && (lhs.capacity_ == rhs.capacity_) )
+	if ( (lhs.size_() == rhs.size_()) && (lhs.capacity_() == rhs.capacity_()) )
 	{
-		for ( insigned int i = 0;i < lhs.size_; i++ )
+		for ( unsigned int i = 0;i < lhs.size_; i++ )
 		{
 			if ( !( lhs.data_[i] == rhs.data_[i] ) )
 			{
