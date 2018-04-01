@@ -108,7 +108,7 @@ void vector_t::push_back(int value)
 
 void vector_t::pop_back()
 {
-	if ( size_ <= capacity_ / 2 )
+	if ( size_ <= capacity_ / 4 )
 	{
 		vector_t copy( *this );
 		delete [] data_;
