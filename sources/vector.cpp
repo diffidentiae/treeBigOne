@@ -13,7 +13,7 @@ vector_t::vector_t()
 vector_t::vector_t(vector_t const & other)
 {
 	data_ = new int [other.capacity_];
-	for ( std::size_t i = 0;i < other.size_(); i++ ) 
+	for ( std::size_t i = 0;i < other.size_; i++ ) 
 	{
 		data_[i] = other.data_[i];
 	}
@@ -42,7 +42,7 @@ vector_t & vector_t::operator =(vector_t const & other)
 
 bool vector_t::operator ==(vector_t const & other) const
 {
-	if ( (size_ == other.size_()) && (capacity_ == other.capacity_()) )
+	if ( (size_ == other.size_) && (capacity_ == other.capacity_) )
 	{
 		for ( std::size_t i = 0;i < size_; i++ )
 		{
@@ -138,11 +138,11 @@ int vector_t::operator [](std::size_t index) const
 
 bool operator !=(vector_t const & lhs, vector_t const & rhs)
 {
-	if ( (lhs.size_() == rhs.size_()) && (lhs.capacity_() == rhs.capacity_()) )
+	if ( (lhs.size() == rhs.size()) && (lhs.capacity() == rhs.capacity()) )
 	{
 		for ( std::size_t i = 0;i < lhs.size_; i++ )
 		{
-			if ( !( lhs.data_[i] == rhs.data_[i] ) )
+			if ( !( lhs[i] == rhs[i] ) )
 			{
 				return true;
 			}
