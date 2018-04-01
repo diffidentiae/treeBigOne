@@ -44,7 +44,7 @@ bool vector_t::operator ==(vector_t const & other) const
 {
 	if ( (size_ == other.size_) && (capacity_ == other.capacity_) )
 	{
-		for ( insigned int i = 0;i < size_; i++ )
+		for ( unsigned int i = 0;i < size_; i++ )
 		{
 			if ( !( data_[i] == other.data_[i] ) )
 			{
@@ -94,7 +94,7 @@ void vector_t::push_back(int value)
 		data_ = new int [capacity_];
 		for ( unsigned int i = 0;i < size_;i++ )
 		{
-			this->data_[i]=copy.data_[i]
+			this->data_[i]=copy.data_[i];
 		}
 		size_++;		
 		data_[size_ - 1] = value;
