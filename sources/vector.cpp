@@ -61,7 +61,10 @@ bool vector_t::operator ==(vector_t const & other) const
 
 vector_t::~vector_t()
 {
-	delete [] data_;
+	if ( data_ != nullptr )
+	{
+		delete [] data_;	
+	}
 }
 
 std::size_t vector_t::size() const
@@ -125,17 +128,29 @@ void vector_t::pop_back()
 
 int & vector_t::operator [](std::size_t index)
 {
-	
-	return elements_[0];
+	return data_[index];
 }
 
 int vector_t::operator [](std::size_t index) const
 {
-	return 0;
+	return data_[index];
 }
 
 bool operator !=(vector_t const & lhs, vector_t const & rhs)
 {
-	
-	return true;
+	if ( (size_ == other.size_) && (capacity_ == other.capacity_) )
+	{
+		for ( insigned int i = 0;i < size_; i++ )
+		{
+			if ( !( data_[i] == other.data_[i] ) )
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	else
+	{
+		return true;
+	}
 }
