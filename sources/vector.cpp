@@ -113,7 +113,7 @@ void vector_t::pop_back()
 		std::cout << "массив пуст";
 		return ;
 	}
-	if ( size_- 1 <= capacity_ / 4 )
+	if ( (size_- 1) <= (capacity_ / 4) )
 	{
 		vector_t copy( *this );
 		delete [] data_;
