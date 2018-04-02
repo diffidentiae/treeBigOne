@@ -110,7 +110,7 @@ void vector_t::pop_back()
 {
 	if (size_ == 0)
 	{
-		cout << "массив пуст";
+		std::cout << "массив пуст";
 		return ;
 	}
 	if ( size_- 1 <= capacity_ / 4 )
