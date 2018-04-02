@@ -138,15 +138,8 @@ int vector_t::operator [](std::size_t index) const
 
 bool operator !=(vector_t const & lhs, vector_t const & rhs)
 {
-	if ( (lhs.size() == rhs.size()) && (lhs.capacity() == rhs.capacity()) )
+	if ( lhs == rhs )
 	{
-		for ( std::size_t i = 0;i < lhs.size(); i++ )
-		{
-			if ( !( lhs[i] == rhs[i] ) )
-			{
-				return true;
-			}
-		}
 		return false;
 	}
 	else
