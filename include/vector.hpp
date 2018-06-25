@@ -186,7 +186,7 @@ Type_ & vector_t<Type_>::at(std::size_t index)
 {
 	try
 	{
-		if ((index>=size_()) || (index<0))
+		if ((index>=size()) || (index<0))
 		{
 			throw 0;
 		}
@@ -204,7 +204,7 @@ Type_  vector_t<Type_>::at(std::size_t index) const
 {
 	try
 	{
-		if ((index>=size_()) || (index<0))
+		if ((index>=size()) || (index<0))
 		{
 			throw 0;
 		}
