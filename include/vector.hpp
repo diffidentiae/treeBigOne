@@ -29,6 +29,7 @@ public:
 	bool operator ==(vector_t const & other) const;
 };
 
+template <typename Type_>
 bool operator !=(vector_t<Type_> const & lhs, vector_t<Type_> const & rhs);
 
 template <typename Type_>
@@ -189,12 +190,12 @@ Type_ & vector_t<Type_>::at(std::size_t index)
 		{
 			throw 0;
 		}
-		return elements_[index];
+		return data_[index];
 	}
 	catch(std::size_t i)
 	{
 		std::cout <<  "Данный индекс за пределами массива"; 
-		return elements_[i];
+		return data_[i];
 	}
 }
 
@@ -207,12 +208,12 @@ Type_  vector_t<Type_>::at(std::size_t index) const
 		{
 			throw 0;
 		}
-		return elements_[index];
+		return data_[index];
 	}
 	catch(std::size_t i)
 	{
 		std::cout <<  "Данный индекс за пределами массива"; 
-		return elements_[i];
+		return data_[i];
 	}
     	
 }
