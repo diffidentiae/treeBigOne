@@ -29,7 +29,7 @@ public:
 	bool operator ==(vector_t const & other) const;
 };
 
-bool operator !=(vector_t const & lhs, vector_t const & rhs);
+bool operator !=(vector_t<Type_> const & lhs, vector_t<Type_> const & rhs);
 
 template <typename Type_>
 vector_t<Type_>::vector_t()
@@ -169,13 +169,13 @@ void vector_t<Type_>::pop_back()
 }
 
 template <typename Type_>
-int & vector_t<Type_>::operator [](std::size_t index)
+Type_ & vector_t<Type_>::operator [](std::size_t index)
 {
 	return data_[index];
 }
 
 template <typename Type_>
-int vector_t<Type_>::operator [](std::size_t index) const
+Type_ vector_t<Type_>::operator [](std::size_t index) const
 {
 	return data_[index];
 }
