@@ -114,7 +114,7 @@ std::size_t vector_t<Type_>::capacity() const
 }
 
 template <typename Type_>
-void vector_t<Type_>::push_back(int value)
+void vector_t<Type_>::push_back(Type_ value)
 {
 	if ( capacity_ == 0)
 	{
@@ -181,12 +181,12 @@ Type_ vector_t<Type_>::operator [](std::size_t index) const
 	return data_[index];
 }
 
-template <typename T>
+template <typename Type_>
 Type_ & vector_t<Type_>::at(std::size_t index)
 {
 	try
 	{
-		if (index>=size_ || index<0)
+		if ((index>=size_()) || (index<0))
 		{
 			throw 0;
 		}
@@ -199,12 +199,12 @@ Type_ & vector_t<Type_>::at(std::size_t index)
 	}
 }
 
-template<typename T>
+template<typename Type_>
 Type_  vector_t<Type_>::at(std::size_t index) const
 {
 	try
 	{
-		if (index>=size_ || index<0)
+		if ((index>=size_()) || (index<0))
 		{
 			throw 0;
 		}
